@@ -1,5 +1,7 @@
 package com.lewis.entities;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.sql.Driver;
@@ -24,6 +26,7 @@ public class Customer implements Serializable {
 
 
     @Pattern(regexp="^[a-zA-Z0-9]{5}",message="only 5 char/digits")
+    @NotNull(message = "is required")
     private  String postalCode;
 
     public Customer() {

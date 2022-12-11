@@ -19,7 +19,7 @@ public class StudentController {
 
         theModel.addAttribute("student", theStudent);
 
-        return "student-form";
+        return "student/student-form";
     }
 
     @RequestMapping("/processForm")
@@ -28,6 +28,6 @@ public class StudentController {
 
         model.addAttribute("student",student);
 
-        return "student-confirmation";
+        return "student/student-confirmation";
     }
 }

@@ -15,13 +15,13 @@ public class HelloWorldController {
     @RequestMapping("/showForm")
     public String showForm()
     {
-        return "helloworld-form";
+        return "helloworld/helloworld-form";
     }
 
     @RequestMapping("/processForm")
     public String processForm()
     {
-        return "helloworld";
+        return "helloworld/helloworld";
     }
 
     @RequestMapping("/processFormVersionTwo")
@@ -34,7 +34,7 @@ public class HelloWorldController {
 
         model.addAttribute("message", result);
 
-        return "helloworld";
+        return "helloworld/helloworld";
     }
 
     @RequestMapping("/processFormVersionThree")
@@ -45,6 +45,6 @@ public class HelloWorldController {
         String result = "Hey my friend from v3 " + theName;
         model.addAttribute("message",result);
 
-        return "helloworld";
+        return "helloworld/helloworld";
     }
 }
